@@ -1,20 +1,25 @@
+using IntroDevOps.math;
 using Xunit;
 
 namespace IntroDevOps.Tests
 {
     public class UnitTest1
     {
-        [Fact]
-        public void TestSumar(int num1 int num2)
+        [Theory]
+        [InlineData(5, 5)]
+        [InlineData(2, 8)]
+        [InlineData(3, 7)]
+        [InlineData(10, 0)]
+        public void TestSumar(int num1, int num2)
         {
             //Arranque
             var expected = 10;
 
             //Act
-            var resultado = Calculadora.Sumar(num1, num2);
+            var resultado = Calculadora.sumar(num1, num2);
 
-            //Asser
-            Assert.Equal()
+            //Assert
+            Assert.Equal(expected, resultado);
         }
     }
 }
